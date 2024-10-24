@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Grid, Heading, Text } from "@radix-ui/themes"
+import { Box, Button, Heading, Text } from "@radix-ui/themes"
 import { Link } from "react-router-dom";
 import { FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";

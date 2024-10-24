@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from "@radix-ui/themes"
+import { Box, Text } from "@radix-ui/themes"
 import { MdOutlinePhone } from "react-icons/md";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FaInstagram } from "react-icons/fa";
