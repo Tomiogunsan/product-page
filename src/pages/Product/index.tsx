@@ -1,4 +1,4 @@
-import { Box, Button } from "@radix-ui/themes";
+import { Box, Button, Text } from "@radix-ui/themes";
 
 import { MdOutlineStarPurple500 } from "react-icons/md";
 
@@ -166,30 +166,30 @@ const Product = () => {
       >
         {product.map((item) => {
           return (
-            <div className="grid gap-y-2 border border-gray-300 rounded-md shadow-md shadow-[#efefef]">
-              <div className="w-full  h-max  lg:h-80">
+            <Box as='div' className="grid gap-y-2 border border-gray-300 rounded-md shadow-md shadow-[#efefef]">
+              <Box as='div' className="w-full  h-max  lg:h-80">
                 <img
                   src={item.img}
                   alt=""
                   className="w-full h-full object-cover"
                 />
-              </div>
-              <div className="flex justify-between px-2">
-                <p className="font-medium">{item.name}</p>
-                <p className="font-semibold">${item.price}</p>
-              </div>
-              <div className="flex justify-between px-2">
-                <div className="flex gap-2 items-center ">
-                  <span className="flex gap-[3px] items-center">
+              </Box>
+              <Box as='div' className="flex justify-between px-2">
+                <Text as='p' className="font-medium">{item.name}</Text>
+                <Text as='p' className="font-semibold">${item.price}</Text>
+              </Box>
+              <Box as='div' className="flex justify-between px-2">
+                <Box as='div' className="flex gap-2 items-center ">
+                  <Text as='span' className="flex gap-[3px] items-center">
                     {" "}
                     <MdOutlineStarPurple500 className="text-yellow-500" />{" "}
                     {item.rating}
-                  </span>
-                  <span className="text-gray-500 text-sm">
+                  </Text>
+                  <Text as='span' className="text-gray-500 text-sm">
                     ({item.review} reviews)
-                  </span>
-                </div>
-                <span className="text-gray-500 font-mediun w-max">
+                  </Text>
+                </Box>
+                <Text as='span' className="text-gray-500 font-mediun w-max">
                   <MySelect
                     placeholder="Size"
                     options={[
@@ -207,22 +207,22 @@ const Product = () => {
                       },
                     ]}
                   />
-                </span>
-              </div>
+                </Text>
+              </Box>
 
-              <div className="flex justify-between px-2">
-                <p className="text-sm text-gray-500">{item.description}</p>
-                <div className='flex gap-2'>
-                  <div className={`${item.color1} w-4 h-4 rounded-full `}/>
-                  <div className={`${item.color2} w-4 h-4 rounded-full `}/>
-                  <div className={`${item.color3} w-4 h-4 rounded-full `}/>
-                </div>
-              </div>
+              <Box as='div' className="flex justify-between px-2">
+                <Text as='p' className="text-sm text-gray-500">{item.description}</Text>
+                <Box as='div' className='flex gap-2'>
+                  <Box as='div' className={`${item.color1} w-4 h-4 rounded-full `}/>
+                  <Box as='div' className={`${item.color2} w-4 h-4 rounded-full `}/>
+                  <Box as='div' className={`${item.color3} w-4 h-4 rounded-full `}/>
+                </Box>
+              </Box>
 
               <Button className="rounded-2xl ring-1 ring-lama text-lama w-max py-2 px-4 text-xs mx-2 mb-4 ">
                 Add to Cart
               </Button>
-            </div>
+            </Box>
           );
         })}
       </Box>
