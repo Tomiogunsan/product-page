@@ -11,7 +11,7 @@ export type Props = {
 };
 const MySelect = ({ options , placeholder}: Props) => (
   <Select.Root>
-    <Select.Trigger className="inline-flex items-center justify-between w-full px-4 py-2 text-sm bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500">
+    <Select.Trigger className="inline-flex items-center justify-between w-full px-4 py-2 text-sm bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-200">
       <Select.Value placeholder={placeholder} />
       <Select.Icon className="ml-2">
         <ChevronDownIcon />
