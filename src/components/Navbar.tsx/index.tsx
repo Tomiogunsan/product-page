@@ -1,5 +1,5 @@
 import { Box, Text } from "@radix-ui/themes";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import MobileMenu from "../MobileMenu";
 import { CgProfile } from "react-icons/cg";
 import { FaShoppingCart } from "react-icons/fa";
@@ -45,12 +45,57 @@ const Navbar = ({
             </Text>
           </Link>
           <Box as="div" className="hidden xl:flex gap-4">
-            <Link to="/">Home</Link>
-            <Link to="/product">Product</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "underline-pink-800 border-[#94004f] border-b-[3px]"
+                  : ""
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/product"
+              className={({ isActive }) =>
+                isActive
+                  ? "underline-pink-800 border-[#94004f] border-b-[3px]"
+                  : ""
+              }
+            >
+              Product
+            </NavLink>
 
-            <Link to="/about">About</Link>
-            <Link to="/blog">Blog</Link>
-            <Link to="/contact">Contact</Link>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive
+                  ? "underline-pink-800 border-[#94004f] border-b-[3px]"
+                  : ""
+              }
+            >
+              About
+            </NavLink>
+            <NavLink
+              to="/blog"
+              className={({ isActive }) =>
+                isActive
+                  ? "underline-pink-800 border-[#94004f] border-b-[3px]"
+                  : ""
+              }
+            >
+              Blog
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                isActive
+                  ? "underline-pink-800 border-[#94004f] border-b-[3px]"
+                  : ""
+              }
+            >
+              Contact
+            </NavLink>
           </Box>
         </Box>
         {/* right */}

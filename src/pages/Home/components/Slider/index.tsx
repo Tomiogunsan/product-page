@@ -10,7 +10,7 @@ const slides = [
     description: "Sales! up to 25% discount",
     img: "/Group 3742.svg",
     img2: "/sofa.svg",
-    url: "/shop",
+    url: "/product",
     bg: "bg-gradient-to-r from-[#DCA3B7] to-[#f3e1e1] ",
   },
 
@@ -19,7 +19,7 @@ const slides = [
     title: "New Summer Sales Collections",
     description: "Sales! 30% discount",
     img: "/clothing.svg",
-    url: "/shop",
+    url: "/product",
     bg: "bg-gradient-to-r from-[#f3e1e1] to-pink-50 ",
   },
 
@@ -28,7 +28,7 @@ const slides = [
     title: " Get Cosmetics Sales Collections ",
     description: "Sale! up to 40% off",
     img: "/cosmetics.svg",
-    url: "/shop",
+    url: "/product",
     bg: "bg-gradient-to-r from-[#eae9e7] to-[#d8d5d0] ",
   },
   {
@@ -36,7 +36,7 @@ const slides = [
     title: "Accessories Sale ",
     description: "Sale! up to 30% off",
     img: "accessories.svg",
-    url: "/shop",
+    url: "/product",
     bg: "bg-gradient-to-r from-blue-50 to-yellow-50",
   },
   {
@@ -44,7 +44,7 @@ const slides = [
     title: " Household Sales ",
     description: "Up to -30% discount!.",
     img: "/interiors.svg",
-    url: "/shop",
+    url: "/product",
     bg: "bg-gradient-to-r from-[#eae9e7] to-[#eae9e7] ",
   },
 ];

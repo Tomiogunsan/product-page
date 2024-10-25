@@ -1,10 +1,9 @@
 import { Box } from "@radix-ui/themes";
 import { useState } from "react";
-import { Link } from "react-router-dom";
-
+import {  NavLink } from "react-router-dom";
 
 const MobileMenu = () => {
-      const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   return (
     <Box as="div">
       <img
@@ -18,25 +17,65 @@ const MobileMenu = () => {
           as="div"
           className="absolute bg-black text-white left-0 top-20 w-full h-[calc(100vh-80px)] flex flex-col items-center justify-center gap-8 text-xl  z-10"
         >
-          <Link to="/" onClick={() => setOpen(false)}>
+          <NavLink
+            to="/"
+            onClick={() => setOpen(false)}
+            className={({ isActive }) =>
+              isActive
+                ? "underline-pink-800 border-[#94004f] border-b-[3px]"
+                : ""
+            }
+          >
             Home
-          </Link>
-          <Link to="/product" onClick={() => setOpen(false)}>
+          </NavLink>
+          <NavLink
+            to="/product"
+            onClick={() => setOpen(false)}
+            className={({ isActive }) =>
+              isActive
+                ? "underline-pink-800 border-[#94004f] border-b-[3px]"
+                : ""
+            }
+          >
             Product
-          </Link>
-          <Link to="/about" onClick={() => setOpen(false)}>
+          </NavLink>
+          <NavLink
+            to="/about"
+            onClick={() => setOpen(false)}
+            className={({ isActive }) =>
+              isActive
+                ? "underline-pink-800 border-[#94004f] border-b-[3px]"
+                : ""
+            }
+          >
             About
-          </Link>
-          <Link to="/blog" onClick={() => setOpen(false)}>
+          </NavLink>
+          <NavLink
+            to="/blog"
+            onClick={() => setOpen(false)}
+            className={({ isActive }) =>
+              isActive
+                ? "underline-pink-800 border-[#94004f] border-b-[3px]"
+                : ""
+            }
+          >
             Blog
-          </Link>
-          <Link to="/contact" onClick={() => setOpen(false)}>
+          </NavLink>
+          <NavLink
+            to="/contact"
+            onClick={() => setOpen(false)}
+            className={({ isActive }) =>
+              isActive
+                ? "underline-pink-800 border-[#94004f] border-b-[3px]"
+                : ""
+            }
+          >
             Contact
-          </Link>
+          </NavLink>
         </Box>
       )}
     </Box>
   );
-}
+};
 
-export default MobileMenu
+export default MobileMenu;
