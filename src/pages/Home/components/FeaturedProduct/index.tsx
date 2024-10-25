@@ -7,16 +7,16 @@ const products = [
     id: 1,
     img: "/fixed-height.svg",
     imgItem: "taylor.svg",
-    name: "Gold Wrist Watch",
-    price: "₦5000",
-    description: "Elegant wristwatch",
+    name: "Shirt",
+    price: "$5000",
+    description: "Elegant shirt",
   },
   {
     id: 2,
     img: "/sofa.svg",
     imgItem: "Group 3742.svg",
     name: "Comfortable Sofa",
-    price: "₦50000",
+    price: "$5000",
     description: "Stay in Comfort",
   },
   {
@@ -24,7 +24,7 @@ const products = [
     img: "/Component 8.svg",
     imgItem: "/bag.svg",
     name: "Gucci Bag",
-    price: "₦7000",
+    price: "$7000",
     description: "Be Extraordinary",
   },
   {
@@ -32,7 +32,7 @@ const products = [
     img: "/Component 7.svg",
     imgItem: "/hat.svg",
     name: "Headset",
-    price: "₦15000",
+    price: "$1500",
     description: "Music all around you",
   },
 ];
@@ -45,7 +45,7 @@ const FeaturedProduct = () => {
       <Box as='div' className=" hidden mt-12 lg:flex gap-x-8 gap-y-16 justify-between flex-wrap">
         {products.map((product) => (
           <Link
-            to="/shop"
+            to="/product"
             key={product.id}
             className="w-full flex flex-col gap-4 sm:w-[45%] lg:w-[22%]"
           >
@@ -53,7 +53,7 @@ const FeaturedProduct = () => {
               <img
                 src={product.img}
                 alt=""
-                className=" absolute object-cover rounded-md z-10 hover:opacity-0 transition-opacity easy duration-500"
+                className=" absolute object-cover  rounded-md z-10 hover:opacity-0 transition-opacity easy duration-500"
               />
               <img
                 src={product.imgItem}
@@ -74,8 +74,8 @@ const FeaturedProduct = () => {
       </Box>
       <Box as='div' className="grid md:grid-cols-2  gap-6 lg:hidden mt-12 ">
         {products.map((product) => (
-          <Link to="/shop" key={product.id} className="w-full">
-            <Box as='div' className="w-full h-80 ">
+          <Link to="/product" key={product.id} className="w-full h-max">
+            <Box as='div' className="w-full h-max md:h-[387px] air:h-max  lg:h-max overflow-hidden ">
               <img
                 src={product.img}
                 alt=""

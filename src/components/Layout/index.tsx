@@ -4,12 +4,18 @@ import SocialMediaBanner from "../SocialMediaBanner";
 import { Outlet } from "react-router-dom";
 import Footer from "../Footer";
 
-const RootLayout = () => {
+const RootLayout = ({
+  searchQuery,
+  setSearchQuery,
+}: {
+  searchQuery: string;
+  setSearchQuery: React.Dispatch<React.SetStateAction<string>>;
+}) => {
   return (
     <>
       <Box as="div" className="fixed top-0 z-20 w-full">
         <SocialMediaBanner />
-        <Navbar />
+        <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       </Box>
       <Outlet />
       <Footer />

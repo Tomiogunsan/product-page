@@ -33,7 +33,7 @@ const Footer = () => {
           </Heading>
           <Box className="flex flex-col gap-4">
             <Link to="/About">About Us</Link>
-            <Link to="/shop">Shop</Link>
+            <Link to="/product">Product</Link>
 
             <Link to="/blog">Blog</Link>
             <Link to="/contact">Contact Us</Link>
@@ -45,7 +45,7 @@ const Footer = () => {
           </Heading>
           <Box as="div" className="flex flex-col gap-4">
             <Link to="/About">About Us</Link>
-            <Link to="/shop">Shop</Link>
+            <Link to="/product">Product</Link>
 
             <Link to="/blog">Blog</Link>
             <Link to="/contact">Contact Us</Link>

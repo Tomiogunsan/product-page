@@ -21,8 +21,8 @@ const MobileMenu = () => {
           <Link to="/" onClick={() => setOpen(false)}>
             Home
           </Link>
-          <Link to="/shop" onClick={() => setOpen(false)}>
-            Shop
+          <Link to="/product" onClick={() => setOpen(false)}>
+            Product
           </Link>
           <Link to="/about" onClick={() => setOpen(false)}>
             About

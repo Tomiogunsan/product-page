@@ -7,7 +7,13 @@ import { FcLikePlaceholder } from "react-icons/fc";
 import { CiBellOn } from "react-icons/ci";
 import SearchBar from "../SearchBar";
 
-const Navbar = () => {
+const Navbar = ({
+  searchQuery,
+  setSearchQuery,
+}: {
+  searchQuery: string;
+  setSearchQuery: React.Dispatch<React.SetStateAction<string>>;
+}) => {
   return (
     <Box
       as="div"
@@ -40,7 +46,7 @@ const Navbar = () => {
           </Link>
           <Box as="div" className="hidden xl:flex gap-4">
             <Link to="/">Home</Link>
-            <Link to="/shop">Shop</Link>
+            <Link to="/product">Product</Link>
 
             <Link to="/about">About</Link>
             <Link to="/blog">Blog</Link>
@@ -52,7 +58,10 @@ const Navbar = () => {
           as="div"
           className="w-2/3 xl:w-1/2 flex items-center justify-between gap-8"
         >
-          <SearchBar />
+          <SearchBar
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+          />
           <Box as="div" className="flex gap-2">
             <CgProfile size={24} />
             <FaShoppingCart size={24} />
